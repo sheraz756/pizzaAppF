@@ -3,11 +3,11 @@ import pizaImg from '../../assets/peproni.png'
 import { CartContext } from '../../CartContext'
 import { Link} from 'react-router-dom'
 const Product = ({product}) => {
-  const{cart,SetCart} = useContext(CartContext)
-  console.log(cart)
+  const{cart,setCart} = useContext(CartContext)
 
 
   const addToCart = (e,product) =>{
+    e.preventDefault()
     console.log(product._id)
       const _cart = {...cart}
       // console.log(_cart)
@@ -27,7 +27,7 @@ const Product = ({product}) => {
     
         _cart.totalItems += 1
     
-      SetCart(_cart)
+      setCart(_cart)
   }
 
   return (

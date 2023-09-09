@@ -8,7 +8,7 @@ const SingleComponent = () => {
     useEffect(()=>{
         const getSingleProduct = async()=>{
             try{
-                const res = await axios.get(`http://154.41.229.104/api/products/${id}`)
+                const res = await axios.get(`http://154.41.229.104:5501/api/products/${id}`)
                 console.log(res.data)
             }
             catch(e)
