@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
 import CartImg from '../../assets/cart.png'
+import { CartContext } from '../../CartContext'
 const Navbar = () => {
+  const {cart} = useContext(CartContext)
+  const totalItems = cart ?cart.totalItems : 0
     const cartStyle ={
         display:'flex',
         backgroundColor:'#FFC463',
@@ -17,7 +20,7 @@ const Navbar = () => {
             <Link to='/products'><li className='ml-6'>Products</li></Link>
            <Link to='/cart'> <li className='ml-6'>
               <div style={cartStyle}>
-              <span>10</span>
+              <span>{totalItems}</span>
                 <img src={CartImg}alt="" />
               </div>
             </li></Link>

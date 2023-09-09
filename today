@@ -11,3 +11,16 @@
 //props
 
 //context api
+
+//
+Product.jsx:13 Uncaught TypeError: Cannot read properties of undefined (reading '64e643b47ea4931e4853a8d2')
+    at addToCart (Product.jsx:13:22)
+    at onClick (Product.jsx:36:32)
+    at HTMLUnknownElement.callCallback2 (react-dom.development.js:4164:14)
+    at Object.invokeGuardedCallbackDev (react-dom.development.js:4213:16)
+    at invokeGuardedCallback (react-dom.development.js:4277:31)
+    at invokeGuardedCallbackAndCatchFirstError (react-dom.development.js:4291:25)
+    at executeDispatch (react-dom.development.js:9041:3)
+    at processDispatchQueueItemsInOrder (react-dom.development.js:9073:7)
+    at processDispatchQueue (react-dom.development.js:9086:5)
+    at dispatchEventsForPlugins (react-dom.development.js:9097:3)

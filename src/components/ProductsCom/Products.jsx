@@ -9,7 +9,7 @@ const Products = () => {
     useEffect(()=>{
       const getProducts = async()=>{
             try{
-                const resp = await axios.get('http://localhost:5000/api/products')
+                const resp = await axios.get('http://154.41.229.104:5501/api/products')
                 console.log(resp.data)
                 setData(resp.data)
             }catch(e)
